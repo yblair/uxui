@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+} */
+
+@theme {
+  --color-secondary: #232a3b;
+  --color-secondary-50: #293145;
+  --color-primary: #b9529a;
+  --color-text: #fff;
+  --text-h1: 1.75em;
+  --text-h2: 1.25em;
+  --text-h3: 1.125em;
+  --text-h4: 1em;
+  --text-h5: 0.875em;
+  --radius-1em: 1em;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--color-secondary);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1.25rem;
+  overflow-y: hidden;
+}
+
+.gradient-bg {
+  background: linear-gradient(
+    to bottom,
+    #b9529a 0%,
+    rgba(83, 37, 69, 0.19) 100%
+  );
+}
+
+/* Animaciones orbitales para las burbujas */
+@keyframes orbit-1 {
+  0% {
+    transform: rotate(0deg) translateX(145px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(145px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-2 {
+  0% {
+    transform: rotate(72deg) translateX(145px) rotate(-72deg);
+  }
+  100% {
+    transform: rotate(432deg) translateX(145px) rotate(-432deg);
+  }
+}
+
+@keyframes orbit-3 {
+  0% {
+    transform: rotate(144deg) translateX(145px) rotate(-144deg);
+  }
+  100% {
+    transform: rotate(504deg) translateX(145px) rotate(-504deg);
+  }
+}
+
+@keyframes orbit-4 {
+  0% {
+    transform: rotate(216deg) translateX(145px) rotate(-216deg);
+  }
+  100% {
+    transform: rotate(576deg) translateX(145px) rotate(-576deg);
+  }
+}
+
+@keyframes orbit-5 {
+  0% {
+    transform: rotate(288deg) translateX(145px) rotate(-288deg);
+  }
+  100% {
+    transform: rotate(648deg) translateX(145px) rotate(-648deg);
+  }
+}
+
+.animate-float-1 {
+  animation: orbit-1 8s linear infinite;
+}
+
+.animate-float-2 {
+  animation: orbit-2 8s linear infinite;
+}
+
+.animate-float-3 {
+  animation: orbit-3 8s linear infinite;
+}
+
+.animate-float-4 {
+  animation: orbit-4 8s linear infinite;
+}
+
+.animate-float-5 {
+  animation: orbit-5 8s linear infinite;
+}

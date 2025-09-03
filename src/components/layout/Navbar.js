@@ -47,7 +47,7 @@ export default function Navbar() {
           }
           href="#mainSkills"
         />
-        <Button
+        {/*         <Button
           image={
             <WorkIcon
               color={
@@ -56,7 +56,7 @@ export default function Navbar() {
             />
           }
           href="#experience"
-        />
+        /> */}
         <Button
           image={
             <TrophyIcon

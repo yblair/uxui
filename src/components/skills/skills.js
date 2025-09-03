@@ -12,6 +12,7 @@ import {
   LanguageIcon,
   UXIcon,
 } from "../Icons/icons";
+import ArrowButton from "../layout/ArrowButton";
 
 export default function skills() {
   const skills = [
@@ -58,11 +59,6 @@ export default function skills() {
       icon: <APIIcon />,
     },
     {
-      title: "VISUALIZACIÓN",
-      description: "Graficos y animaciones",
-      icon: <ChartIcon />,
-    },
-    {
       title: "ESTADOS",
       description:
         "Uso de react hooks - context - redux para gestionar estados.",
@@ -74,21 +70,29 @@ export default function skills() {
         "Diferentes tipos de renderizado segun necesidades del cliente.",
       icon: <MonitorIcon />,
     },
+    {
+      title: "VISUALIZACIÓN",
+      description: "Graficos y animaciones",
+      icon: <ChartIcon />,
+    },
   ];
   return (
-    <section
-      id="skills"
-      className="flex flex-col items-center justify-center m
-      pt-28 w-full gap-4 "
-    >
-      {skills.map((skill, index) => (
-        <Section
-          key={index}
-          title={skill.title}
-          description={skill.description}
-          img={skill.icon}
-        />
-      ))}
-    </section>
+    <div className="flex flex-col items-center justify-center py-28">
+      <section
+        id="skills"
+        className="grid grid-cols-1 md:grid-cols-2 justify-items-center 
+       w-full gap-4 "
+      >
+        {skills.map((skill, index) => (
+          <Section
+            key={index}
+            title={skill.title}
+            description={skill.description}
+            img={skill.icon}
+          />
+        ))}
+      </section>
+      <ArrowButton nextHash="#contact" text="Contacto" />
+    </div>
   );
 }

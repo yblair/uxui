@@ -1,4 +1,5 @@
 import React from "react";
+import ArrowButton from "../layout/ArrowButton";
 
 export default function MainSkills() {
   const skills = [
@@ -35,7 +36,7 @@ export default function MainSkills() {
   return (
     <section
       id="mainSkills"
-      className="flex flex-col items-center justify-center pt-28 gap-4 w-full text-white"
+      className="flex flex-col items-center justify-center py-28 gap-4 w-full text-white"
     >
       {skills.map((skill, index) => (
         <div
@@ -52,6 +53,7 @@ export default function MainSkills() {
           ))}
         </div>
       ))}
+      <ArrowButton nextHash="#skills" text="Logros" />
     </section>
   );
 }

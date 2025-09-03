@@ -2,12 +2,13 @@ import React from "react";
 import Image from "next/image";
 import { DownloadIcon } from "../Icons/icons";
 import Button from "../layout/Button";
+import ArrowButton from "../layout/ArrowButton";
 
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center mt-22 gap-6 mb-22"
+      className="flex flex-col items-center justify-center pt-28 pb-20 gap-6 "
     >
       <div className="w-[350px] h-[350px] rounded-full overflow-hidden  bg-gradient-to-b from-primary to-secondary ">
         <Image src="/yami.PNG" alt="Contact" width={350} height={350} />
@@ -42,6 +43,11 @@ export default function Contact() {
           link="https://github.com/yblair"
         />
       </div>
+      <ArrowButton
+        nextHash="#home"
+        text="Volver al inicio"
+        isLastSection={true}
+      />
     </section>
   );
 }

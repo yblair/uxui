@@ -10,7 +10,7 @@ export default function MainContent() {
   return (
     <section
       id="home"
-      className="flex flex-col items-center justify-center py-28"
+      className="flex flex-col items-center justify-center pt-20 pb-28"
     >
       <div className="flex flex-row items-center justify-center pt-10">
         <div className="w-full absolute z-30 pl-6 lg:pl-[30%] pt-8 lg:pt-0">

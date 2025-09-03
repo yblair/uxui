@@ -1,26 +1,17 @@
-import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
-import Header from "@/components/header/Header";
-import Section from "@/components/sections/Section";
-import { CodeIcon, UXIcon } from "@/components/Icons/icons";
+import MainContent from "@/components/header/MainContent";
+import Skills from "@/components/skills/skills";
+import Contact from "@/components/contact/Contact";
+import MainSkills from "@/components/mainSkills/MainSkills";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen w-full">
+    <div className="flex flex-col justify-start items-center min-h-screen overflow-y-auto w-full ">
       <Navbar />
-      <Header />
-      <div className="flex flex-col items-center justify-center gap-4 pt-4">
-        <Section
-          img={<CodeIcon />}
-          title="Developer"
-          description="Desarrollo frontend Semi Senior. React - Next - Redux - Tailwind CSS."
-        />
-        <Section
-          img={<UXIcon />}
-          title="UX/UI Designer"
-          description="Diseño de experiencia e interfaz de usuario. Figma - After effects"
-        />
-      </div>
+      <MainContent />
+      <MainSkills />
+      <Skills />
+      <Contact />
     </div>
   );
 }

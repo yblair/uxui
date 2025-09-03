@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ImageYamila() {
   return (
-    <div className="relative w-[300px] h-[300px] flex items-center justify-center translate-x-10">
+    <div className="relative w-[300px] h-[300px] flex items-center justify-center ">
       <div className="w-[300px] h-[300px] rounded-full overflow-hidden border-3 border-primary/30 ">
         <Image
           src="/yami.PNG"

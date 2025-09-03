@@ -1,12 +1,47 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function Section({
   img,
   title = "Developer",
   description = "Desarrollo frontend Semi Senior. React - Next - Redux - Tailwind CSS.",
 }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="flex flex-row items-center justify-center gap-4 rounded-1em p-4 bg-primary/30">
+    <div
+      ref={sectionRef}
+      className={`flex flex-row items-center justify-start gap-4 rounded-1em p-4 bg-primary/30 w-full transition-all duration-700 ease-out transform ${
+        isVisible
+          ? "opacity-100 translate-x-0 scale-100"
+          : "opacity-0 translate-x-8 scale-95"
+      }`}
+    >
       <div className="h-[53px] min-w-[53px] rounded-full bg-secondary flex items-center justify-center">
         {img}
       </div>

@@ -24,7 +24,7 @@ export default function Contact() {
           image={<DownloadIcon />}
           href="#contact"
           text="Descargar CV"
-          link="https://drive.google.com/file/d/1cN7BKeQrRTULKgktwfxU1EIb9yOjDr8C/view?usp=drive_link"
+          link="https://drive.google.com/file/d/1py1uACdkDqMGzt7He7ryWoSHtajgrbHv/view?usp=drive_link"
         />
         <Button
           image={

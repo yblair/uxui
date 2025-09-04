@@ -22,13 +22,19 @@ export const metadata = {
   description:
     "Porfolio web de Yamila Belen Lair, Frontend Developer y UX/UI Designer",
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      { url: "icon.ico", sizes: "32x32", type: "image/png" },
+      { url: "icon.ico", sizes: "16x16", type: "image/png" },
+    ],
+    shortcut: "icon.ico",
+    apple: "icon.ico",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head></head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased flex flex-col justify-start items-center w-full`}
       >

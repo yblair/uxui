@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect, useRef } from "react";
 import ArrowButton from "../layout/ArrowButton";
+import Bubbles from "../Icons/Bubbles";
 
 export default function MainSkills() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
   const skills = [
     {
       title: "FRONTEND DEVELOPER",
@@ -33,15 +37,43 @@ export default function MainSkills() {
       ],
     },
   ];
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.2,
+        rootMargin: "0px 0px -100px 0px",
+      }
+    );
+
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
   return (
     <section
       id="mainSkills"
-      className="flex flex-col items-center justify-center py-28 gap-4 w-full text-white"
+      ref={sectionRef}
+      className="relative flex flex-col items-center justify-center py-28 gap-4 text-white overflow-hidden w-full"
     >
       {skills.map((skill, index) => (
         <div
           key={index}
-          className={`flex flex-col  bg-primary/30 rounded-1em p-4 w-full  ${
+          className={`flex flex-col transition-all duration-700 ease-out transform ${
+            isVisible ? "opacity-100  scale-100" : "opacity-0  scale-95"
+          } bg-primary/30 rounded-1em p-4 w-full  ${
             index % 2 === 0 ? "items-start" : "items-end"
           }`}
         >
@@ -53,6 +85,99 @@ export default function MainSkills() {
           ))}
         </div>
       ))}
+      <div className="relative z-[-10]">
+        <Bubbles
+          image="/javascript.svg"
+          animation="animate-bubble-fall-1"
+          zIndex={-1}
+          isFalling={true}
+        />
+        <Bubbles
+          image="/html.svg"
+          animation="animate-bubble-fall-2"
+          zIndex={-1}
+          isFalling={true}
+        />
+        <Bubbles
+          image="/css.svg"
+          animation="animate-bubble-fall-3"
+          zIndex={-1}
+          isFalling={true}
+        />
+        <Bubbles
+          image="/react.svg"
+          animation="animate-bubble-fall-4"
+          zIndex={-1}
+          isFalling={true}
+        />
+        <Bubbles
+          image="/tailwind.svg"
+          animation="animate-bubble-fall-5"
+          zIndex={-1}
+          isFalling={true}
+        />
+        <Bubbles
+          image="/next.svg"
+          animation="animate-bubble-fall-6"
+          zIndex={-1}
+          isFalling={true}
+        />
+        <Bubbles
+          image="/github.png"
+          animation="animate-bubble-fall-7"
+          zIndex={-1}
+          isFalling={true}
+        />
+        <Bubbles
+          image="/postm.png"
+          animation="animate-bubble-fall-8"
+          zIndex={-1}
+          isFalling={true}
+        />
+        <Bubbles
+          image="/vercel.svg"
+          animation="animate-bubble-fall-9"
+          zIndex={-1}
+          isFalling={true}
+        />
+        <Bubbles
+          image="/nodejs.png"
+          animation="animate-bubble-fall-10"
+          zIndex={-1}
+          isFalling={true}
+        />
+        <Bubbles
+          image="/mongodb.png"
+          animation="animate-bubble-fall-11"
+          zIndex={-1}
+          isFalling={true}
+        />
+        <Bubbles
+          image="/express.png"
+          animation="animate-bubble-fall-12"
+          zIndex={-1}
+          isFalling={true}
+        />
+        <Bubbles
+          image="/figmma.png"
+          animation="animate-bubble-fall-13"
+          zIndex={-1}
+          isFalling={true}
+        />
+        <Bubbles
+          image="/typescript.png"
+          animation="animate-bubble-fall-14"
+          zIndex={-1}
+          isFalling={true}
+        />
+        <Bubbles
+          image="/redux.png"
+          animation="animate-bubble-fall-15"
+          zIndex={-1}
+          isFalling={true}
+        />
+      </div>
+
       <ArrowButton nextHash="#skills" text="Logros" />
     </section>
   );

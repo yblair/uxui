@@ -77,7 +77,7 @@ export default function skills() {
     },
   ];
   return (
-    <div className="flex flex-col items-center justify-center py-28">
+    <div className="flex flex-col items-center justify-center py-28 w-full">
       <section
         id="skills"
         className="grid grid-cols-1 md:grid-cols-2 justify-items-center 

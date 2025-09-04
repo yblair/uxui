@@ -7,6 +7,7 @@ export default function Section({
   description = "Desarrollo frontend Semi Senior. React - Next - Redux - Tailwind CSS.",
 }) {
   const [isVisible, setIsVisible] = useState(false);
+  const [showDescription, setShowDescription] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -14,6 +15,10 @@ export default function Section({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+
+          setTimeout(() => {
+            setShowDescription(true);
+          }, 1500);
         }
       },
       {
@@ -45,7 +50,15 @@ export default function Section({
       </div>
       <div className="flex flex-col items-start justify-center gap-1 ">
         <h3 className="text-h3 text-white font-semibold">{title}</h3>
-        <p className="text-h5 text-white">{description}</p>
+        <p
+          className={`text-h5 text-white font-extralight transition-all duration-1000 ease-out transform overflow-hidden ${
+            showDescription
+              ? "opacity-100 scale-100 translate-y-0 max-h-20"
+              : "opacity-0 scale-95 translate-y-4 max-h-0"
+          }`}
+        >
+          {description}
+        </p>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Bubbles from "../Icons/Bubbles";
 
 export default function ImageYamila() {
   return (
@@ -13,22 +14,11 @@ export default function ImageYamila() {
           className="scale-120"
         />
       </div>
-
-      <div className="w-[40px] h-[40px] absolute z-0 rounded-full bg-secondary overflow-hidden border-3 border-primary/30 animate-float-1">
-        <Image src="/javascript.svg" alt="JavaScript" width={40} height={40} />
-      </div>
-      <div className="w-[40px] h-[40px] absolute  rounded-full bg-secondary overflow-hidden border-3 border-primary/30 animate-float-2">
-        <Image src="/html.svg" alt="HTML" width={40} height={40} />
-      </div>
-      <div className="w-[40px] h-[40px] absolute rounded-full bg-secondary overflow-hidden border-3 border-primary/30 animate-float-3">
-        <Image src="/css.svg" alt="CSS" width={40} height={40} />
-      </div>
-      <div className="w-[40px] h-[40px] absolute rounded-full bg-secondary overflow-hidden border-3 border-primary/30 animate-float-4">
-        <Image src="/react.svg" alt="React" width={40} height={40} />
-      </div>
-      <div className="w-[40px] h-[40px] absolute flex justify-center items-center rounded-full bg-secondary overflow-hidden border-3 border-primary/30 animate-float-5">
-        <Image src="/tailwind.svg" alt="Tailwind" width={40} height={40} />
-      </div>
+      <Bubbles image="/javascript.svg" animation="animate-float-1" />
+      <Bubbles image="/html.svg" animation="animate-float-2" />
+      <Bubbles image="/css.svg" animation="animate-float-3" />
+      <Bubbles image="/react.svg" animation="animate-float-4" />
+      <Bubbles image="/tailwind.svg" animation="animate-float-5" />
     </div>
   );
 }

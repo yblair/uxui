@@ -2,6 +2,7 @@ import MainContent from "@/components/header/MainContent";
 import Skills from "@/components/skills/skills";
 import Contact from "@/components/contact/Contact";
 import MainSkills from "@/components/mainSkills/MainSkills";
+import ExperienceSection from "@/components/experience/ExperienceSection";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <MainContent />
       <MainSkills />
       <Skills />
+      {/*    <ExperienceSection /> */}
       <Contact />
     </div>
   );

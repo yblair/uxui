@@ -40,6 +40,17 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Mejoras adicionales para scroll suave */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Offset para el header fijo */
+}
+
+/* Transiciones suaves para elementos que cambian durante el scroll */
+* {
+  scroll-margin-top: 80px; /* Margen superior para scroll suave */
+}
+
 .gradient-bg {
   background: linear-gradient(
     to bottom,

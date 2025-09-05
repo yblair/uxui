@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head></head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased flex flex-col justify-start items-center w-full`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased flex flex-col  justify-start items-center w-full`}
       >
         <Navbar />
         {children}

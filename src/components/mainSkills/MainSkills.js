@@ -63,12 +63,12 @@ export default function MainSkills() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center py-28 w-full">
-      <section
-        id="mainSkills"
-        ref={sectionRef}
-        className="relative flex flex-col items-center justify-center py-28 gap-4 text-white overflow-hidden w-full"
-      >
+    <div
+      id="mainSkills"
+      ref={sectionRef}
+      className="flex flex-col items-center justify-center py-14 md:py-20 w-full"
+    >
+      <section className="relative flex flex-col items-center justify-center  gap-4 text-white overflow-hidden w-full">
         {skills.map((skill, index) => (
           <div
             key={index}

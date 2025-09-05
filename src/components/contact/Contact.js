@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center pt-28 pb-20 gap-6 w-full"
+      className="flex flex-col items-center justify-center py-14 md:py-20 gap-6 w-full"
     >
       <div className="w-[350px] h-[350px] rounded-full overflow-hidden  bg-gradient-to-b from-primary to-secondary ">
         <Image src="/yami.PNG" alt="Contact" width={350} height={350} />

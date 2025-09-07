@@ -4,14 +4,14 @@ import Bubbles from "../Icons/Bubbles";
 
 export default function ImageYamila() {
   return (
-    <div className="relative w-[300px] h-[300px] flex items-center justify-center ">
-      <div className="w-[300px] h-[300px] rounded-full overflow-hidden border-3 border-primary/30 ">
+    <div className="relative w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] flex items-center justify-center ">
+      <div className="w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-3 border-primary/30 ">
         <Image
           src="/yami.PNG"
           alt="Profile"
-          width={300}
-          height={300}
-          className="scale-120"
+          width={450}
+          height={450}
+          className="scale-120 w-[300px] h-[300px] lg:w-[450px] lg:h-[450px]"
         />
       </div>
       <Bubbles image="/javascript.svg" animation="animate-float-1" />

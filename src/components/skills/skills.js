@@ -78,7 +78,7 @@ export default function skills() {
   ];
   return (
     <div
-      className="flex flex-col items-center justify-center py-14 md:py-20 w-full"
+      className="flex flex-col items-center justify-center py-14 md:py-20 lg:py-24  w-full"
       id="skills"
     >
       <section

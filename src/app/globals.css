@@ -10,6 +10,7 @@
   --color-secondary-50: #293145;
   --color-primary: #b9529a;
   --color-text: #fff;
+  --text-h1-lg: 2.5em;
   --text-h1: 1.75em;
   --text-h2: 1.25em;
   --text-h3: 1.125em;
@@ -58,49 +59,97 @@ html {
     rgba(35, 42, 59, 71) 100%
   );
 }
-
-@keyframes orbit-1 {
-  0% {
-    transform: rotate(0deg) translateX(145px) rotate(0deg);
+@media (min-width: 375px) {
+  @keyframes orbit-1 {
+    0% {
+      transform: rotate(0deg) translateX(145px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(145px) rotate(-360deg);
+    }
   }
-  100% {
-    transform: rotate(360deg) translateX(145px) rotate(-360deg);
+
+  @keyframes orbit-2 {
+    0% {
+      transform: rotate(72deg) translateX(145px) rotate(-72deg);
+    }
+    100% {
+      transform: rotate(432deg) translateX(145px) rotate(-432deg);
+    }
+  }
+
+  @keyframes orbit-3 {
+    0% {
+      transform: rotate(144deg) translateX(145px) rotate(-144deg);
+    }
+    100% {
+      transform: rotate(504deg) translateX(145px) rotate(-504deg);
+    }
+  }
+
+  @keyframes orbit-4 {
+    0% {
+      transform: rotate(216deg) translateX(145px) rotate(-216deg);
+    }
+    100% {
+      transform: rotate(576deg) translateX(145px) rotate(-576deg);
+    }
+  }
+
+  @keyframes orbit-5 {
+    0% {
+      transform: rotate(288deg) translateX(145px) rotate(-288deg);
+    }
+    100% {
+      transform: rotate(648deg) translateX(145px) rotate(-648deg);
+    }
   }
 }
 
-@keyframes orbit-2 {
-  0% {
-    transform: rotate(72deg) translateX(145px) rotate(-72deg);
+@media (min-width: 1024px) {
+  @keyframes orbit-1 {
+    0% {
+      transform: rotate(0deg) translateX(225px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(225px) rotate(-360deg);
+    }
   }
-  100% {
-    transform: rotate(432deg) translateX(145px) rotate(-432deg);
-  }
-}
 
-@keyframes orbit-3 {
-  0% {
-    transform: rotate(144deg) translateX(145px) rotate(-144deg);
+  @keyframes orbit-2 {
+    0% {
+      transform: rotate(72deg) translateX(225px) rotate(-72deg);
+    }
+    100% {
+      transform: rotate(432deg) translateX(225px) rotate(-432deg);
+    }
   }
-  100% {
-    transform: rotate(504deg) translateX(145px) rotate(-504deg);
-  }
-}
 
-@keyframes orbit-4 {
-  0% {
-    transform: rotate(216deg) translateX(145px) rotate(-216deg);
+  @keyframes orbit-3 {
+    0% {
+      transform: rotate(144deg) translateX(225px) rotate(-144deg);
+    }
+    100% {
+      transform: rotate(504deg) translateX(225px) rotate(-504deg);
+    }
   }
-  100% {
-    transform: rotate(576deg) translateX(145px) rotate(-576deg);
-  }
-}
 
-@keyframes orbit-5 {
-  0% {
-    transform: rotate(288deg) translateX(145px) rotate(-288deg);
+  @keyframes orbit-4 {
+    0% {
+      transform: rotate(216deg) translateX(225px) rotate(-216deg);
+    }
+    100% {
+      transform: rotate(576deg) translateX(225px) rotate(-576deg);
+    }
   }
-  100% {
-    transform: rotate(648deg) translateX(145px) rotate(-648deg);
+
+  @keyframes orbit-5 {
+    0% {
+      transform: rotate(288deg) translateX(225px) rotate(-288deg);
+    }
+    100% {
+      transform: rotate(648deg) translateX(225px) rotate(-648deg);
+    }
   }
 }
 
@@ -589,4 +638,72 @@ html {
 
 .animate-float-5 {
   animation: orbit-5 8s linear infinite;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.loading-gradient {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  animation: loadingAnimation 3s ease-in-out forwards;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    background: linear-gradient(
+      to bottom,
+      var(--color-primary) 50%,
+      var(--color-secondary) 100%
+    );
+  }
+  25% {
+    background: linear-gradient(
+      to bottom,
+      var(--color-primary) 40%,
+      var(--color-secondary) 100%
+    );
+  }
+
+  50% {
+    background: linear-gradient(
+      to bottom,
+      var(--color-primary) 30%,
+      var(--color-secondary) 100%
+    );
+  }
+  75% {
+    background: linear-gradient(
+      to bottom,
+      var(--color-primary) 20%,
+      var(--color-secondary) 100%
+    );
+  }
+  90% {
+    background: linear-gradient(
+      to bottom,
+      var(--color-primary) 10%,
+      var(--color-secondary) 100%
+    );
+  }
+  100% {
+    background: linear-gradient(
+      to bottom,
+      var(--color-primary) 0%,
+      transparent 100%
+    );
+    opacity: 0;
+  }
 }

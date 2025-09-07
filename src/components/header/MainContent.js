@@ -10,16 +10,24 @@ export default function MainContent() {
   return (
     <section
       id="home"
-      className="flex flex-col items-center justify-center py-14 md:py-20"
+      className="flex  flex-col items-center justify-center py-14 md:py-20 lg:py-20  gap-8"
     >
-      <div className="flex flex-row items-center justify-center pt-10">
-        <div className="w-full absolute z-30 pl-6 lg:pl-[30%] pt-8 lg:pt-0">
+      <div className="flex flex-row  items-center justify-center  py-4 xl:py-14 xl:px-10">
+        <div className="w-full flex flex-col   absolute xl:static  z-30 xl:z-0 pl-6 xl:pl-0 pt-8 xl:pt-0">
           <Title />
+          <div className="w-full hidden xl:flex ">
+            <Description
+              position="text-left"
+              text="Desarrolladora frontend apasionada por la tecnología, con experiencia creando soluciones integrales que combinan funcionalidad y diseño."
+            />
+          </div>
         </div>
         <ImageYamila />
       </div>
-      <Description text="Desarrolladora frontend apasionada por la tecnología, con experiencia creando soluciones integrales que combinan funcionalidad y diseño." />
-      <div className="flex flex-col md:flex-row items-center justify-center gap-4 pt-4">
+      <div className="w-full flex xl:hidden items-center justify-center">
+        <Description text="Desarrolladora frontend apasionada por la tecnología, con experiencia creando soluciones integrales que combinan funcionalidad y diseño." />
+      </div>
+      <div className="flex  w-full flex-col md:flex-row items-center justify-center gap-4">
         <Section
           img={<CodeIcon />}
           title="Developer"

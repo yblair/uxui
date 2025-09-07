@@ -66,7 +66,7 @@ export default function MainSkills() {
     <div
       id="mainSkills"
       ref={sectionRef}
-      className="flex flex-col items-center justify-center py-14 md:py-20 w-full"
+      className="flex flex-col items-center justify-center py-14 md:py-20 lg:py-24  w-full"
     >
       <section className="relative flex flex-col items-center justify-center  gap-4 text-white overflow-hidden w-full">
         {skills.map((skill, index) => (

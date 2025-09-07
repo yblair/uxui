@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Description({ text }) {
+export default function Description({ text, position = "text-center" }) {
   return (
     <div>
-      <h4 className="text-h4 text-white text-center p-4">{text}</h4>
+      <h4 className={`text-h4 text-white   ${position}`}>{text}</h4>
     </div>
   );
 }

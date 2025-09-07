@@ -61,7 +61,7 @@ export default function ExperienceSection() {
     },
   ];
   return (
-    <div className="flex flex-col items-center justify-center py-14 md:py-20 w-full">
+    <div className="flex flex-col items-center justify-center py-14 md:py-20 lg:py-24  w-full">
       <section
         id="experience"
         className="flex flex-col lg:grid lg:grid-cols-2 items-center justify-center lg:items-start gap-12 "

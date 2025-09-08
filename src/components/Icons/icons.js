@@ -1,4 +1,4 @@
-export function UserIcon({ color = "#fff" }) {
+export function UserIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -18,7 +18,7 @@ export function UserIcon({ color = "#fff" }) {
   );
 }
 
-export function NotebookIcon({ color = "#fff" }) {
+export function NotebookIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -38,7 +38,7 @@ export function NotebookIcon({ color = "#fff" }) {
   );
 }
 
-export function TrophyIcon({ color = "#fff" }) {
+export function TrophyIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -58,7 +58,7 @@ export function TrophyIcon({ color = "#fff" }) {
   );
 }
 
-export function WorkIcon({ color = "#fff" }) {
+export function WorkIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -78,7 +78,7 @@ export function WorkIcon({ color = "#fff" }) {
   );
 }
 
-export function MailIcon({ color = "#fff" }) {
+export function MailIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -181,7 +181,7 @@ export function Html5Icon() {
   );
 }
 
-export function CodeIcon({ color = "#fff" }) {
+export function CodeIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -201,7 +201,7 @@ export function CodeIcon({ color = "#fff" }) {
   );
 }
 
-export function UXIcon({ color = "#fff" }) {
+export function UXIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -249,7 +249,7 @@ export function UXIcon({ color = "#fff" }) {
   );
 }
 
-export function ArrowDownIcon({ color = "#fff" }) {
+export function ArrowDownIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -269,7 +269,7 @@ export function ArrowDownIcon({ color = "#fff" }) {
   );
 }
 
-export function MonitorIcon({ color = "#fff" }) {
+export function MonitorIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -289,7 +289,7 @@ export function MonitorIcon({ color = "#fff" }) {
   );
 }
 
-export function StatsIcon({ color = "#fff" }) {
+export function StatsIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -309,7 +309,7 @@ export function StatsIcon({ color = "#fff" }) {
   );
 }
 
-export function ChartIcon({ color = "#fff" }) {
+export function ChartIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -329,7 +329,7 @@ export function ChartIcon({ color = "#fff" }) {
   );
 }
 
-export function APIIcon({ color = "#fff" }) {
+export function APIIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="22"
@@ -346,7 +346,7 @@ export function APIIcon({ color = "#fff" }) {
   );
 }
 
-export function BrushIcon({ color = "#fff" }) {
+export function BrushIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -366,7 +366,7 @@ export function BrushIcon({ color = "#fff" }) {
   );
 }
 
-export function TextIcon({ color = "#fff" }) {
+export function TextIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -386,7 +386,7 @@ export function TextIcon({ color = "#fff" }) {
   );
 }
 
-export function MedalIcon({ color = "#fff" }) {
+export function MedalIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -406,7 +406,7 @@ export function MedalIcon({ color = "#fff" }) {
   );
 }
 
-export function DetailChartIcon({ color = "#fff" }) {
+export function DetailChartIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -426,7 +426,7 @@ export function DetailChartIcon({ color = "#fff" }) {
   );
 }
 
-export function LanguageIcon({ color = "#fff" }) {
+export function LanguageIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -446,7 +446,7 @@ export function LanguageIcon({ color = "#fff" }) {
   );
 }
 
-export function DownloadIcon({ color = "#fff" }) {
+export function DownloadIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="24"
@@ -466,7 +466,7 @@ export function DownloadIcon({ color = "#fff" }) {
   );
 }
 
-export function OpenEyeIcon({ color = "#fff" }) {
+export function OpenEyeIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="88"
@@ -493,7 +493,7 @@ export function OpenEyeIcon({ color = "#fff" }) {
   );
 }
 
-export function CloseEyeIcon({ color = "#fff" }) {
+export function CloseEyeIcon({ color = "var(--color-text)" }) {
   return (
     <svg
       width="92"

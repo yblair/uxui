@@ -10,16 +10,16 @@ export default function Contact() {
       id="contact"
       className="flex flex-col items-center justify-center py-14 md:py-20 lg:py-24  gap-6 w-full"
     >
-      <div className="w-[350px] h-[350px] rounded-full overflow-hidden  bg-gradient-to-b from-primary to-secondary ">
+      <div className="w-[350px] h-[350px] rounded-full overflow-hidden  bg-gradient-to-b from-[var(--color-primary)] to-[var(--color-secondary)] ">
         <Image src="/yami.PNG" alt="Contact" width={350} height={350} />
       </div>
-      <p className="text-h5 text-white text-center px-8 font-extralight">
+      <p className="text-h5 text-[var(--color-text)] text-center px-8 font-extralight">
         Me dedico al desarrollo de software frontend, construyo y gestiono las
         interfaces para garantizar la mejor experiencia de usuario. Estoy
         abierta a nuevas oportunidades en donde pueda contribuir, aprender y
         crecer.
       </p>
-      <div className="flex  items-center bg-secondary-50 lg:p-4  flex-row lg:gap-4 justify-center rounded-1em p-2 gap-2 ">
+      <div className="flex  items-center bg-[var(--color-secondary)]-50 lg:p-4  flex-row lg:gap-4 justify-center rounded-1em p-2 gap-2 ">
         <Button
           image={<DownloadIcon />}
           href="#contact"

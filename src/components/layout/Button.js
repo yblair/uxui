@@ -14,12 +14,12 @@ export default function Button({ image, href, text, link, onClick }) {
 
   return (
     <button
-      className=" hover:bg-primary/20 hover:rounded-1em p-3 cursor-pointer"
+      className=" hover:bg-[var(--color-primary)]/20 hover:rounded-1em p-3 cursor-pointer"
       onClick={handleClick}
     >
       <a
         href={href}
-        className="flex flex-row items-center justify-center gap-2 text-white text-h5"
+        className="flex flex-row items-center justify-center gap-2 text-[var(--color-text)] text-h5"
       >
         {image}
         {text ? text : ""}

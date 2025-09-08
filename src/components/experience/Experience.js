@@ -27,7 +27,7 @@ export default function Experience({ experience }) {
 
   return (
     <div className="w-full flex flex-col items-start justify-start gap-4">
-      <h2 className="text-h2 font-semibold text-left text-white">
+      <h2 className="text-h2 font-semibold text-left text-[var(--color-text)]">
         {experience.title}
       </h2>
       <div className="w-full lg:w-[370px] h-[200px] flex flex-row gap-2 items-center justify-center">
@@ -45,7 +45,7 @@ export default function Experience({ experience }) {
             />
             {!openImages[index] && (
               <div
-                className={`absolute inset-0 bg-primary/50 rounded-1em flex items-center justify-center cursor-pointer transition-all duration-1000 ease-out hover:bg-primary/60 ${
+                className={`absolute inset-0 bg-[var(--color-primary)]/50 rounded-1em flex items-center justify-center cursor-pointer transition-all duration-1000 ease-out hover:bg-[var(--color-primary)]/60 ${
                   showingOpenEye[index]
                     ? "opacity-0 scale-95"
                     : "opacity-100 scale-100"
@@ -67,12 +67,14 @@ export default function Experience({ experience }) {
         ))}
       </div>
       <div className="flex flex-col items-end justify-end  w-full">
-        <h4 className="text-h3  font-semibold text-white">{experience.role}</h4>
+        <h4 className="text-h3  font-semibold text-[var(--color-text)]">
+          {experience.role}
+        </h4>
         {experience.link && (
           <a
             target="_blank"
             href={experience.link}
-            className="text-extralight text-h5  text-white underline"
+            className="text-extralight text-h5  text-[var(--color-text)] underline"
           >
             Sitio web
           </a>

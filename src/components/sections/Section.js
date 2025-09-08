@@ -41,17 +41,19 @@ export default function Section({
   return (
     <div
       ref={sectionRef}
-      className={` flex flex-row items-center justify-start gap-4 rounded-1em p-4 bg-primary/30 w-full transition-all   duration-700 ease-out transform ${
+      className={` flex flex-row items-center justify-start gap-4 rounded-1em p-4 bg-[var(--color-primary)]/30 w-full transition-all   duration-700 ease-out transform ${
         isVisible ? "opacity-100  scale-100" : "opacity-0  scale-95"
       }`}
     >
-      <div className="h-[53px] min-w-[53px] rounded-full bg-secondary flex items-center justify-center">
+      <div className="h-[53px] min-w-[53px] rounded-full bg-[var(--color-secondary)] flex items-center justify-center">
         {img}
       </div>
       <div className="flex flex-col items-start justify-center gap-1 ">
-        <h3 className="text-h3 text-white font-semibold">{title}</h3>
+        <h3 className="text-h3 text-[var(--color-text)] font-semibold">
+          {title}
+        </h3>
         <p
-          className={`text-h5 text-white font-extralight transition-all duration-1000 ease-out transform overflow-hidden ${
+          className={`text-h5 text-[var(--color-text)] font-extralight transition-all duration-1000 ease-out transform overflow-hidden ${
             showDescription
               ? "opacity-100 scale-100 translate-y-0 max-h-20"
               : "opacity-0 scale-95 translate-y-4 max-h-0"

@@ -6,10 +6,6 @@
 } */
 
 @theme {
-  --color-secondary: #232a3b;
-  --color-secondary-50: #293145;
-  --color-primary: #b9529a;
-  --color-text: #fff;
   --text-h1-lg: 2.5em;
   --text-h1: 1.75em;
   --text-h2: 1.25em;
@@ -34,11 +30,17 @@
 
 body {
   background: var(--color-secondary);
-  color: var(--foreground);
+  color: var(--color-text);
   font-family: var(--font-inter);
   padding: 1.25rem;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+/* Prevenir flash de colores */
+html {
+  background: #232a3b; /* Color secundario por defecto */
+  color: #fff; /* Color de texto por defecto */
 }
 
 /* Mejoras adicionales para scroll suave */
@@ -56,7 +58,7 @@ html {
   background: linear-gradient(
     to bottom,
     var(--color-primary) 0%,
-    rgba(35, 42, 59, 71) 100%
+    transparent 100%
   );
 }
 @media (min-width: 375px) {
@@ -648,6 +650,7 @@ html {
   height: 100vh;
   z-index: 9999;
   overflow: hidden;
+  background: var(--color-secondary);
 }
 
 .loading-gradient {

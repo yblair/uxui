@@ -68,13 +68,13 @@ export default function MainSkills() {
       ref={sectionRef}
       className="flex flex-col items-center justify-center py-14 md:py-20 lg:py-24  w-full"
     >
-      <section className="relative flex flex-col items-center justify-center  gap-4 text-white overflow-hidden w-full">
+      <section className="relative flex flex-col items-center justify-center  gap-4 text-[var(--color-text)] overflow-hidden w-full">
         {skills.map((skill, index) => (
           <div
             key={index}
             className={`flex flex-col transition-all duration-700 ease-out transform ${
               isVisible ? "opacity-100  scale-100" : "opacity-0  scale-95"
-            } bg-primary/30 rounded-1em p-4 w-full  ${
+            } bg-[var(--color-primary)]/30 rounded-1em p-4 w-full  ${
               index % 2 === 0 ? "items-start" : "items-end"
             }`}
           >

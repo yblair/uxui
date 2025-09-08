@@ -6,10 +6,9 @@ export default function Loading() {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Ocultar el loading después de 3 segundos
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 3000);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, []);

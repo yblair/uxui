@@ -5,7 +5,7 @@ import Bubbles from "../Icons/Bubbles";
 export default function ImageYamila() {
   return (
     <div className="relative w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] flex items-center justify-center ">
-      <div className="w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-3 border-primary/30 ">
+      <div className="w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-3 border-[var(--color-primary)]/30 ">
         <Image
           src="/yami.PNG"
           alt="Profile"

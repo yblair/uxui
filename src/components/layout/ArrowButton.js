@@ -36,7 +36,7 @@ export default function ArrowButton({ nextHash, isLastSection = false, text }) {
   return (
     <div className=" flex flex-col items-center justify-center gap-8 pt-16 w-full ">
       <button
-        className={`bg-primary rounded-full animate-pulse   -translate-y-1/2 hover:bg-primary/80 transition-all duration-300 h-[70px] w-[70px] flex items-center justify-center ${
+        className={`bg-[var(--color-primary)] rounded-full animate-pulse   -translate-y-1/2 hover:bg-[var(--color-primary)]/80 transition-all duration-300 h-[70px] w-[70px] flex items-center justify-center ${
           isLastSection && "rotate-180"
         } ${isScrolling ? "opacity-50 cursor-not-allowed" : "hover:scale-105"}`}
         onClick={(e) => !isScrolling && scrollToSection(e, nextHash)}
@@ -49,7 +49,7 @@ export default function ArrowButton({ nextHash, isLastSection = false, text }) {
         }`}
         onClick={(e) => !isScrolling && scrollToSection(e, nextHash)}
       >
-        <h2 className="text-white text-h2 uppercase font-semibold px-2">
+        <h2 className="text-[var(--color-text)] text-h2 uppercase font-semibold px-2">
           {text}
         </h2>
       </div>

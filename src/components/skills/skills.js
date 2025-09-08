@@ -23,7 +23,7 @@ export default function skills() {
       icon: <BrushIcon />,
     },
     {
-      title: "INTERNACIONALIZACIÓN",
+      title: "I18N",
       description: "Sitios multi-idiomas para mayor alcance de usuarios.",
       icon: <LanguageIcon />,
     },
@@ -38,9 +38,9 @@ export default function skills() {
       icon: <MedalIcon />,
     },
     {
-      title: "ACCESIBILIDAD",
+      title: "A11Y",
       description:
-        "Buenas practicas y accesibilidad A11Y para usuarios con discapacidades.",
+        "Buenas practicas y accesibilidad para usuarios con discapacidades.",
       icon: <TextIcon />,
     },
     {
@@ -48,14 +48,14 @@ export default function skills() {
       description: "Sitios con branding, tema y modos customizables.",
       icon: <UXIcon />,
     },
-    {
+    /*     {
       title: "DISEÑO UX/UI",
       description: "Diseño de componentes en figma.",
       icon: <BrushIcon />,
-    },
+    }, */
     {
-      title: "INTEGRACIONES",
-      description: "Consumo de APIs RESTful.",
+      title: "APIS RESTFUL",
+      description: "Integracion de APIs RESTful.",
       icon: <APIIcon />,
     },
     {

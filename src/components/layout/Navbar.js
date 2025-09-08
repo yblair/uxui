@@ -6,11 +6,15 @@ import {
   TrophyIcon,
   MailIcon,
   NotebookIcon,
+  UXIcon,
+  LanguageIcon,
 } from "@/components/Icons/icons";
 import Button from "./Button";
+import Picker from "../picker/Picker";
 
 export default function Navbar() {
   const [currentHash, setCurrentHash] = useState("");
+  const [isPickerOpen, setIsPickerOpen] = useState(false);
 
   const getCurrentSection = useCallback(() => {
     const sections = ["#home", "#mainSkills", "#skills", "#contact"];
@@ -28,17 +32,14 @@ export default function Navbar() {
         }
       }
     }
-    return "#home"; // Default
+    return "#home";
   }, []);
 
-  // Función para navegar con scroll suave
   const navigateToSection = useCallback((hash) => {
     const element = document.querySelector(hash);
     if (element) {
-      // Actualizar el hash
       window.history.pushState(null, null, hash);
 
-      // Scroll suave
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition =
@@ -49,7 +50,6 @@ export default function Navbar() {
         behavior: "smooth",
       });
 
-      // Actualizar estado
       setCurrentHash(hash);
     }
   }, []);
@@ -89,61 +89,89 @@ export default function Navbar() {
   }, [currentHash]);
 
   return (
-    <div className="bg-secondary-50/80 fixed z-50  backdrop-blur-sm w-[calc(100%-2.5rem)]  rounded-1em h-16 flex items-center justify-between">
-      <nav className="flex px-3 items-center justify-center mx-auto gap-[4%] ">
-        <Button
-          image={
-            <UserIcon
-              color={currentHash === "#home" ? "var(--color-primary)" : "#fff"}
-            />
-          }
-          href="#home"
-          onClick={() => navigateToSection("#home")}
-        />
-        <Button
-          image={
-            <NotebookIcon
-              color={
-                currentHash === "#mainSkills" ? "var(--color-primary)" : "#fff"
+    <>
+      <div className="bg-[var(--color-secondary)]/60 fixed z-40   backdrop-blur-sm w-[calc(100%-2.5rem)]  rounded-1em h-16 flex items-center justify-center">
+        <div className="w-full flex items-center justify-between lg:max-w-[800px] xl:max-w-[1000px]">
+          <nav className="flex px-3 items-center justify-center  gap-[4%] ">
+            <Button
+              image={
+                <UserIcon
+                  color={
+                    currentHash === "#home"
+                      ? "var(--color-primary)"
+                      : "var(--color-text)"
+                  }
+                />
               }
+              href="#home"
+              onClick={() => navigateToSection("#home")}
             />
-          }
-          href="#mainSkills"
-          onClick={() => navigateToSection("#mainSkills")}
-        />
-        {/*     <Button
+            <Button
+              image={
+                <NotebookIcon
+                  color={
+                    currentHash === "#mainSkills"
+                      ? "var(--color-primary)"
+                      : "var(--color-text)"
+                  }
+                />
+              }
+              href="#mainSkills"
+              onClick={() => navigateToSection("#mainSkills")}
+            />
+            {/*     <Button
           image={
             <WorkIcon
               color={
-                currentHash === "#experience" ? "var(--color-primary)" : "#fff"
+                currentHash === "#experience" ? "var(--color-primary)" : "var(--color-text)"
               }
             />
           }
           href="#experience"
-        /> */}
-        <Button
-          image={
-            <TrophyIcon
-              color={
-                currentHash === "#skills" ? "var(--color-primary)" : "#fff"
+          /> */}
+            <Button
+              image={
+                <TrophyIcon
+                  color={
+                    currentHash === "#skills"
+                      ? "var(--color-primary)"
+                      : "var(--color-text)"
+                  }
+                />
               }
+              href="#skills"
+              onClick={() => navigateToSection("#skills")}
             />
-          }
-          href="#skills"
-          onClick={() => navigateToSection("#skills")}
-        />
-        <Button
-          image={
-            <MailIcon
-              color={
-                currentHash === "#contact" ? "var(--color-primary)" : "#fff"
+            <Button
+              image={
+                <MailIcon
+                  color={
+                    currentHash === "#contact"
+                      ? "var(--color-primary)"
+                      : "var(--color-text)"
+                  }
+                />
               }
+              href="#contact"
+              onClick={() => navigateToSection("#contact")}
             />
-          }
-          href="#contact"
-          onClick={() => navigateToSection("#contact")}
-        />
-      </nav>
-    </div>
+          </nav>
+          <div className="flex items-center justify-center px-3 gap-6">
+            <button
+              className="hover:bg-[var(--color-primary)]/20 hover:rounded-1em p-3 cursor-pointer"
+              onClick={() => setIsPickerOpen(true)}
+            >
+              <UXIcon color="var(--color-primary)" />
+            </button>
+            {/*          <button className="hover:bg-[var(--color-primary)]/20 hover:rounded-1em p-3 cursor-pointer">
+              <LanguageIcon color="var(--color-primary)" />
+            </button> */}
+          </div>
+        </div>
+      </div>
+      {isPickerOpen && (
+        <Picker isOpen={isPickerOpen} onClose={() => setIsPickerOpen(false)} />
+      )}
+    </>
   );
 }

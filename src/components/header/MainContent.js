@@ -30,12 +30,12 @@ export default function MainContent() {
       <div className="flex  w-full flex-col md:flex-row items-center justify-center gap-4">
         <Section
           img={<CodeIcon />}
-          title="Developer"
+          title="DEVELOPER"
           description="Desarrollo frontend Semi Senior. React - Next - Redux - Tailwind CSS."
         />
         <Section
           img={<UXIcon />}
-          title="UX/UI Designer"
+          title="UX/UI DESIGNER"
           description="Diseño de experiencia e interfaz de usuario. Figma - After effects"
         />
       </div>

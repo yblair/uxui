@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-export default function Button({ image, href, text, link, onClick }) {
+export default function Button({ image, href, text, link, onClick, style }) {
   const handleClick = (e) => {
     if (onClick) {
       e.preventDefault();
@@ -14,7 +14,7 @@ export default function Button({ image, href, text, link, onClick }) {
 
   return (
     <button
-      className=" hover:bg-[var(--color-primary)]/20 hover:rounded-1em p-3 cursor-pointer"
+      className={` hover:bg-[var(--color-primary)]/20 hover:rounded-1em p-3 cursor-pointer ${style}`}
       onClick={handleClick}
     >
       <a

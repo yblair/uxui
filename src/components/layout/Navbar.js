@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import {
   UserIcon,
   WorkIcon,
@@ -14,7 +14,13 @@ import Picker from "../picker/Picker";
 
 export default function Navbar() {
   const [currentHash, setCurrentHash] = useState("");
-  const [isPickerOpen, setIsPickerOpen] = useState(false);
+  const pickerDialogRef = useRef(null);
+
+  const openPicker = useCallback(() => {
+    if (pickerDialogRef.current) {
+      pickerDialogRef.current.showModal();
+    }
+  }, []);
 
   const getCurrentSection = useCallback(() => {
     const sections = ["#home", "#mainSkills", "#skills", "#contact"];
@@ -90,7 +96,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="bg-[var(--color-secondary)]/60 fixed z-40   backdrop-blur-sm w-[calc(100%-2.5rem)]  rounded-1em h-16 flex items-center justify-center">
+      <div className="bg-[var(--color-text)]/5 fixed z-40   backdrop-blur-sm w-[calc(100%-2.5rem)]  rounded-1em h-16 flex items-center justify-center">
         <div className="w-full flex items-center justify-between lg:max-w-[800px] xl:max-w-[1000px]">
           <nav className="flex px-3 items-center justify-center  gap-[4%] ">
             <Button
@@ -156,12 +162,12 @@ export default function Navbar() {
               onClick={() => navigateToSection("#contact")}
             />
           </nav>
-          <div className="flex items-center justify-center px-3 gap-6">
+          <div className="flex items-center justify-center px-3 gap-6 ">
             <button
-              className="hover:bg-[var(--color-primary)]/20 hover:rounded-1em p-3 cursor-pointer"
-              onClick={() => setIsPickerOpen(true)}
+              className="bg-[var(--color-primary)]/40 hover:rounded-1em   rounded-full    p-3 cursor-pointer"
+              onClick={openPicker}
             >
-              <UXIcon color="var(--color-primary)" />
+              <UXIcon color="var(--color-text)" />
             </button>
             {/*          <button className="hover:bg-[var(--color-primary)]/20 hover:rounded-1em p-3 cursor-pointer">
               <LanguageIcon color="var(--color-primary)" />
@@ -169,9 +175,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      {isPickerOpen && (
-        <Picker isOpen={isPickerOpen} onClose={() => setIsPickerOpen(false)} />
-      )}
+      <Picker ref={pickerDialogRef} />
     </>
   );
 }

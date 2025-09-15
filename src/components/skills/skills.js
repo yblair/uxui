@@ -48,11 +48,11 @@ export default function skills() {
       description: "Sitios con branding, tema y modos customizables.",
       icon: <UXIcon />,
     },
-    /*     {
+    {
       title: "DISEÑO UX/UI",
       description: "Diseño de componentes en figma.",
       icon: <BrushIcon />,
-    }, */
+    },
     {
       title: "APIS RESTFUL",
       description: "Integracion de APIs RESTful.",
@@ -74,6 +74,11 @@ export default function skills() {
       title: "VISUALIZACIÓN",
       description: "Graficos y animaciones",
       icon: <ChartIcon />,
+    },
+    {
+      title: "GOOGLE ANALYTICS",
+      description: "Analitica de datos",
+      icon: <DetailChartIcon />,
     },
   ];
   return (

@@ -24,8 +24,11 @@ export default function Bubbles({
 
   return (
     <div
-      className={`w-[50px] h-[50px] flex justify-center items-center absolute z-[${zIndex}] rounded-full bg-[var(--color-secondary)]/80 backdrop-blur-sm overflow-hidden border-2 border-[var(--color-primary)]/30 shadow-lg ${animation}`}
-      style={isFalling ? randomPosition : {}}
+      className={`w-[50px] h-[50px] flex justify-center items-center absolute rounded-full bg-[var(--color-secondary)]/80 backdrop-blur-sm overflow-hidden border-2 border-[var(--color-primary)]/30 shadow-lg ${animation}`}
+      style={{
+        ...(isFalling ? randomPosition : {}),
+        zIndex: zIndex,
+      }}
     >
       <Image
         src={image}

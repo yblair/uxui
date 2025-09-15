@@ -19,14 +19,16 @@ export default function Contact() {
         abierta a nuevas oportunidades en donde pueda contribuir, aprender y
         crecer.
       </p>
-      <div className="flex  items-center bg-[var(--color-secondary)]-50 lg:p-4  flex-row lg:gap-4 justify-center rounded-1em p-2 gap-2 ">
+      <div className="flex  items-center  lg:p-4  flex-row lg:gap-4 justify-center gap-2 ">
         <Button
+          style="bg-[var(--color-text)]/40 rounded-full h-[40px] w-[40px]"
           image={<DownloadIcon />}
           href="#contact"
-          text="CV"
+          text=""
           link="https://drive.google.com/file/d/1py1uACdkDqMGzt7He7ryWoSHtajgrbHv/view?usp=drive_link"
         />
         <Button
+          style="bg-[var(--color-text)]/40 rounded-full h-[40px] w-[40px]"
           image={
             <Image src="/linkedin.png" alt="Linkedin" width={24} height={24} />
           }
@@ -35,6 +37,7 @@ export default function Contact() {
           link="https://www.linkedin.com/in/yamila-belen-lair/"
         />
         <Button
+          style="bg-[var(--color-text)]/40 rounded-full h-[40px] w-[40px]"
           image={
             <Image src="/github.png" alt="Github" width={24} height={24} />
           }

@@ -15,7 +15,7 @@ export default function Home() {
     // Aplicar colores inmediatamente para evitar flash
     const defaultColors = {
       "--color-primary": "#b9529a",
-      "--color-secondary": "#232a3b",
+      "--color-secondary": "#181A21",
       "--color-text": "#fff",
     };
 

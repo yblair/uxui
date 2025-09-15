@@ -68,25 +68,9 @@ export default function MainSkills() {
       ref={sectionRef}
       className="flex flex-col items-center justify-center py-14 md:py-20 lg:py-24  w-full"
     >
-      <section className="relative flex flex-col items-center justify-center  gap-4 text-[var(--color-text)] overflow-hidden w-full">
-        {skills.map((skill, index) => (
-          <div
-            key={index}
-            className={`flex flex-col transition-all duration-700 ease-out transform ${
-              isVisible ? "opacity-100  scale-100" : "opacity-0  scale-95"
-            } bg-[var(--color-primary)]/30 rounded-1em p-4 w-full  ${
-              index % 2 === 0 ? "items-start" : "items-end"
-            }`}
-          >
-            <h3 className="text-h3 font-semibold">{skill.title}</h3>
-            {skill.description.map((description, index) => (
-              <span key={index} className="inline-block text-h5 font-normal">
-                {description}
-              </span>
-            ))}
-          </div>
-        ))}
-        <div className="relative z-[-10]">
+      <section className="relative flex flex-col items-center justify-center gap-4 text-[var(--color-text)] w-full">
+        {/* Bubbles de fondo */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
           <Bubbles
             image="/javascript.svg"
             animation="animate-bubble-fall-1"
@@ -177,6 +161,29 @@ export default function MainSkills() {
             zIndex={-1}
             isFalling={true}
           />
+        </div>
+
+        {/* Contenido de habilidades */}
+        <div className="relative z-10 flex flex-col items-center justify-center gap-4 w-full">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className={`flex flex-col transition-all duration-700 ease-out transform ${
+                isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
+              } bg-[var(--color-text)]/5 rounded-1em p-4 w-full ${
+                index % 2 === 0 ? "items-start" : "items-end"
+              }`}
+            >
+              <h3 className="text-h2 font-semibold text-[var(--color-primary)]">
+                {skill.title}
+              </h3>
+              {skill.description.map((description, index) => (
+                <span key={index} className="inline-block text-h5 font-normal">
+                  {description}
+                </span>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
       <ArrowButton nextHash="#skills" text="Logros" />
